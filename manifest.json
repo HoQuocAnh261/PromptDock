@@ -1,11 +1,16 @@
 {
-  "id": "/promptdock/",
+  "id": "com.promptdock.desktop",
   "name": "PromptDock",
-  "short_name": "Dock",
-  "description": "AI Prompt Manager for ChatGPT, Gemini, Claude, Grok… Windows 11 Fluent PWA running 100% offline.",
+  "short_name": "PromptDock",
+  "description": "Ultra-fast Windows 11 Desktop AI Prompt Manager. 100% Offline with Dynamic Variables auto-fill.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#111827",
@@ -40,6 +45,22 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./icons/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "PromptDock Windows 11 Desktop AI Prompt Manager"
+    },
+    {
+      "src": "./icons/screenshot-mobile.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "PromptDock Mobile & Compact View"
     }
   ],
   "shortcuts": [

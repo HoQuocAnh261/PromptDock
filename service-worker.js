@@ -4,7 +4,7 @@
  * Works 100% offline without any remote server
  */
 
-const CACHE_NAME = 'promptdock-cache-v1.4.0';
+const CACHE_NAME = 'promptdock-cache-v1.5.0';
 
 const PRECACHE_ASSETS = [
   './',
@@ -17,7 +17,9 @@ const PRECACHE_ASSETS = [
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './icons/icon-maskable.png'
+  './icons/icon-maskable.png',
+  './icons/screenshot-desktop.png',
+  './icons/screenshot-mobile.png'
 ];
 
 // Install Event: Cache all essential application files
