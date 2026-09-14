@@ -8,6 +8,7 @@
   "display": "standalone",
   "display_override": [
     "window-controls-overlay",
+    "tabbed",
     "standalone",
     "minimal-ui"
   ],
@@ -21,6 +22,7 @@
     "utilities",
     "developer tools"
   ],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
   "icons": [
     {
       "src": "./icons/icon-192.png",
@@ -72,7 +74,8 @@
       "icons": [
         {
           "src": "./icons/icon-192.png",
-          "sizes": "192x192"
+          "sizes": "192x192",
+          "type": "image/png"
         }
       ]
     },
@@ -84,7 +87,8 @@
       "icons": [
         {
           "src": "./icons/icon-192.png",
-          "sizes": "192x192"
+          "sizes": "192x192",
+          "type": "image/png"
         }
       ]
     },
@@ -96,9 +100,78 @@
       "icons": [
         {
           "src": "./icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./index.html",
+      "name": "PromptDock JSON Export",
+      "accept": {
+        "application/json": [".json"]
+      }
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+promptdock",
+      "url": "./index.html?prompt=%s"
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text"
+    }
+  },
+  "edge_side_panel": {
+    "preferred_width": 480
+  },
+  "note_taking": {
+    "new_note_url": "./index.html?action=new"
+  },
+  "widgets": [
+    {
+      "name": "PromptDock Quick Prompt",
+      "description": "Quickly access your favorite prompts",
+      "tag": "promptdock-quick",
+      "template": "widget",
+      "ms_ac_template": "widget.json",
+      "data": "widget-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "./icons/screenshot-desktop.png",
+          "sizes": "1280x720",
+          "label": "PromptDock Widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
           "sizes": "192x192"
         }
       ]
+    }
+  ],
+  "scope_extensions": [
+    {
+      "origin": "https://hoquocanh261.github.io"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "windows",
+      "url": "https://www.microsoft.com/store/apps/PromptDock",
+      "id": "PromptDock"
     }
   ],
   "prefer_related_applications": false

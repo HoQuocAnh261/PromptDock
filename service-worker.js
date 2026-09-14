@@ -4,7 +4,7 @@
  * Works 100% offline without any remote server
  */
 
-const CACHE_NAME = 'promptdock-cache-v1.5.0';
+const CACHE_NAME = 'promptdock-cache-v1.6.0';
 
 const PRECACHE_ASSETS = [
   './',
@@ -86,3 +86,19 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
+// Background Sync Listener (PWABuilder / Store Feature)
+self.addEventListener('sync', (event) => {
+  console.log('[Service Worker] Background sync event triggered:', event.tag);
+});
+
+// Periodic Background Sync Listener (PWABuilder / Store Feature)
+self.addEventListener('periodicsync', (event) => {
+  console.log('[Service Worker] Periodic background sync triggered:', event.tag);
+});
+
+// Push Notifications Listener (PWABuilder / Store Feature)
+self.addEventListener('push', (event) => {
+  console.log('[Service Worker] Push notification received');
+});
+
