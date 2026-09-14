@@ -1,0 +1,84 @@
+{
+  "id": "/promptdock/",
+  "name": "PromptDock",
+  "short_name": "Dock",
+  "description": "AI Prompt Manager for ChatGPT, Gemini, Claude, Grok… Windows 11 Fluent PWA running 100% offline.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#111827",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "productivity",
+    "utilities",
+    "developer tools"
+  ],
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Create New Prompt",
+      "short_name": "New Prompt",
+      "description": "Create a new AI prompt",
+      "url": "./index.html?action=new",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Search Prompts",
+      "short_name": "Search",
+      "description": "Search AI prompts",
+      "url": "./index.html?action=search",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Favorite Prompts",
+      "short_name": "Favorites",
+      "description": "View favorite prompts",
+      "url": "./index.html?view=favorites",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}
