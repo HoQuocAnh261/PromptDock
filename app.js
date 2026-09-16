@@ -2081,17 +2081,38 @@ class PromptDockApp {
       const params = new URLSearchParams(window.location.search);
       const action = params.get('action');
       const view = params.get('view');
+      const search = params.get('search');
+      const theme = params.get('theme');
 
+      if (params.has('store') || params.has('fullscreen')) {
+        document.body.classList.add('store-screenshot');
+      }
+      if (theme) {
+        this.settings.theme = theme;
+        StorageManager.saveSettings(this.settings);
+        this.applySettings();
+      }
       if (view) {
         this.setView(view);
       }
+      if (search) {
+        this.searchInput.value = search;
+        this.searchQuery = search.trim().toLowerCase();
+        this.btnClearSearch.classList.toggle('visible', this.searchQuery.length > 0);
+        this.renderPromptsList();
+        if (this.filteredPrompts.length > 0) {
+          this.selectPrompt(this.filteredPrompts[0]);
+        }
+      }
       if (action === 'new') {
-        setTimeout(() => this.openCreateModal(), 120);
+        setTimeout(() => this.openCreateModal(), 150);
+      } else if (action === 'settings') {
+        setTimeout(() => this.openSettingsModal(), 150);
       } else if (action === 'search') {
         setTimeout(() => {
           this.searchInput.focus();
           this.searchInput.select();
-        }, 120);
+        }, 150);
       }
     } catch (e) {
       console.warn('URL params parsing failed', e);

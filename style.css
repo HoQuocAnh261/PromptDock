@@ -207,6 +207,40 @@ body {
   padding: 16px;
 }
 
+/* Standalone PWA / Store Window & Fullscreen */
+@media (display-mode: standalone), (display-mode: window-controls-overlay) {
+  body {
+    padding: 0;
+    margin: 0;
+    background: var(--bg-window);
+  }
+  .window-shell {
+    max-width: 100% !important;
+    max-height: 100vh !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+body.store-screenshot {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: var(--bg-window) !important;
+}
+
+body.store-screenshot .window-shell {
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .window-shell {
   width: 100%;
   max-width: 1200px;
